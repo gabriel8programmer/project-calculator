@@ -1,0 +1,75 @@
+/*calculator*/
+.calculator {
+  padding: 2rem 1.5rem;
+  border-radius: 10px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-calculator);
+}
+
+/*title*/
+.title {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 100%;
+  color: var(--color-title);
+}
+
+/*display*/
+.display {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 3px outset #bbb;
+  border-radius: 10px;
+  margin: 1rem 0;
+  padding: 0 1rem;
+  background: var(--bg-display);
+}
+
+.display span {
+  font-size: 1.5rem;
+  font-family: monospace;
+}
+
+.display .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.display .container #accumulator {
+  color: #aaa;
+  font-size: 1.2rem;
+}
+
+/*buttons*/
+.buttons {
+  width: 100%;
+  flex: 1;
+  display: grid;
+  gap: .3rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.buttons button {
+  background: var(--bg-button);
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 1.1rem 0;
+}
+
+.buttons .operator {
+  color: #bbb;
+  font-weight: bold;
+}
+
+#equal {
+  grid-row: 6;
+  grid-column: 2/5;
+}
+
+/*end calculator*/

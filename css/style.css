@@ -1,0 +1,8 @@
+/*initial config css*/
+@import "./config.css";
+
+/*calculator container*/
+@import "./calculator.css";
+
+/*responsive css*/
+@import "./responsive.css";
