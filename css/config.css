@@ -18,8 +18,9 @@ body {
 
 /*variables css*/
 :root {
-  --bg-calculator: #345;
-  --color-title: #cee;
-  --bg-display: linear-gradient(180deg, #5f55, #1f14, #0a05);
-  --bg-button: linear-gradient(45deg, #0845, #0635, #0525);
+  --color-title: #6f95ff;
+  --bg-calculator: #1c0b2b;
+  --bg-display: #301c41;
+  --bg-button: #413b6b;
+  --bg-button-operator: #5c65c0;
 }
