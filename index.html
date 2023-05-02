@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Calculator</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <script src="./js/script.js" type="module" defer></script>
+    <script src="./js/script.js" defer></script>
 </head>
 
 <body>
@@ -15,44 +15,48 @@
     <!--container calculator-->
     <div class="calculator">
 
-        <!--title of the calculator-->
-        <h1 class="title">Calculator</h1>
+        <div class="container">
 
-        <!--display of the calculator-->
-        <div class="display" id="display">
-            <div class="container">
-                <span id="accumulator">0</span>
-                <span id="char">0</span>
+            <!--title of the calculator-->
+            <h1 class="title">Calculator</h1>
+
+            <!--display of the calculator-->
+            <div class="display" id="display">
+                <div class="container-display">
+                    <span id="accumulator">0000000000000000000000000</span>
+                    <span id="char">0000000000000000000000000</span>
+                </div>
+                <span id="operator">=</span>
             </div>
-            <span id="operator">=</span>
-        </div>
 
-        <!--buttons of the calculator-->
-        <div class="buttons">
+            <!--buttons of the calculator-->
+            <div class="buttons">
 
-            <button class="button operator">+</button>
-            <button class="button operator">-</button>
-            <button class="button operator">&times;</button>
-            <button class="button operator">&div;</button>
+                <button class="button operator">+</button>
+                <button class="button operator">-</button>
+                <button class="button operator">&times;</button>
+                <button class="button operator">&div;</button>
 
-            <button class="button char">7</button>
-            <button class="button char">8</button>
-            <button class="button char">9</button>
-            <button class="button char">(</button>
+                <button class="button char">7</button>
+                <button class="button char">8</button>
+                <button class="button char">9</button>
+                <button class="button char">(</button>
 
-            <button class="button char">4</button>
-            <button class="button char">5</button>
-            <button class="button char">6</button>
-            <button class="button char">)</button>
+                <button class="button char">4</button>
+                <button class="button char">5</button>
+                <button class="button char">6</button>
+                <button class="button char">)</button>
 
-            <button class="button char">1</button>
-            <button class="button char">2</button>
-            <button class="button char">3</button>
-            <button id="equal" class="button">=</button>
+                <button class="button char">1</button>
+                <button class="button char">2</button>
+                <button class="button char">3</button>
+                <button id="equal" class="button">=</button>
 
-            <button class="button">&larr;</button>
-            <button class="button char">0</button>
-            <button class="button char">.</button>
+                <button class="button">&larr;</button>
+                <button class="button char">0</button>
+                <button class="button char">.</button>
+
+            </div>
 
         </div>
     </div>
