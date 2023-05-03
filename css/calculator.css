@@ -47,7 +47,7 @@
   font-size: 1.2rem;
 }
 
-.display .container-display #char {
+.display .container-display #expression {
   font-size: 2rem;
 }
 
@@ -93,7 +93,7 @@
 
 #equal {
   grid-column: 4;
-  grid-row: 4/6;
+  grid-row: 2/6;
 }
 
 /*end calculator*/
