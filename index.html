@@ -2,63 +2,63 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Calculator</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <script src="./js/script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Calculator</title>
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!--import font awesome to the project-->
+  <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+    integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+    crossorigin="anonymous"></script>
+
+  <script src="./js/theme.js" defer></script>
 </head>
 
 <body>
 
-    <!--container calculator-->
-    <div class="calculator">
+  <button id="btn-change-theme">
+    <i class="fa fa-sun" id="light"></i>
+    <i class="fa fa-moon invisible" id="dark"></i>
+  </button>
 
-        <div class="container">
+  <div class="calculator">
 
-            <!--title of the calculator-->
-            <h1 class="title">Calculator</h1>
+    <h1>Calculator</h1>
 
-            <!--display of the calculator-->
-            <div class="display" id="display">
-                <div class="container-display">
-                    <span id="accumulator">0</span>
-                    <span id="expression">0</span>
-                </div>
-                <span id="operator">=</span>
-            </div>
+    <div class="display">0</div>
 
-            <!--buttons of the calculator-->
-            <div class="buttons">
+    <div class="buttons">
 
-                <button class="button operator">+</button>
-                <button class="button operator">-</button>
-                <button class="button operator">&times;</button>
-                <button class="button operator">&div;</button>
+      <button class="button operator">+</button>
+      <button class="button operator">-</button>
+      <button class="button operator">&times;</button>
+      <button class="button operator">&div;</button>
 
-                <button class="button char">7</button>
-                <button class="button char">8</button>
-                <button class="button char">9</button>
+      <button class="button number">7</button>
+      <button class="button number">8</button>
+      <button class="button number">9</button>
+      <button class="button config">CE</button>
 
-                <button class="button char">4</button>
-                <button class="button char">5</button>
-                <button class="button char">6</button>
+      <button class="button number">4</button>
+      <button class="button number">5</button>
+      <button class="button number">6</button>
 
-                <button class="button char">1</button>
-                <button class="button char">2</button>
-                <button class="button char">3</button>
-                <button id="equal" class="button">=</button>
 
-                <button id="clear" class="button">CE</button>
-                <button class="button char">0</button>
-                <button class="button char">.</button>
+      <button class="button number">1</button>
+      <button class="button number">2</button>
+      <button class="button number">3</button>
 
-            </div>
+      <button class="button number">.</button>
+      <button class="button number">0</button>
+      <button class="button config">&larr;</button>
+      <button class="button config" id="equal">=</button>
 
-        </div>
+
     </div>
-    <!--end container calculator-->
+
+  </div>
 
 </body>
 
