@@ -5,22 +5,27 @@
 
 /*root*/
 :root {
+  /*theme dark*/
   --background-dark: #000;
-  --calculator-bg: #444;
-  --display-calculator-bg: #333;
-  --button-number-calculator-bg: #111;
-  --button-operator-calculator-bg: #333;
-  --button-config-calculator-bg: #222;
-  --background-light: #ddd;
+  --color-dark: #fff;
+  --calculator-bg: #7778;
+  --display-calculator-bg: #6668;
+  --button-number-calculator-bg: #1118;
+  --button-operator-calculator-bg: #25252580;
+  --button-config-calculator-bg: #2228;
+  /*theme light*/
+  --background-light: #999;
+  --color-light:  #000;
 }
 
 .light-theme {
   background: var(--background-light);
+  color: var(--color-light);
 }
 
 body {
   background: var(--background-dark);
-  color: #fff;
+  color: var(--color-dark);
   overflow: hidden;
   height: 100vh;
   display: flex;
@@ -74,9 +79,10 @@ body {
 
 .calculator .buttons .button {
   font-size: 1rem;
-  color: #fff;
   border-radius: 15px;
   border: none;
+  font-weight: bold;
+  color: inherit;
 }
 
 .calculator .buttons .button:hover {
@@ -115,7 +121,6 @@ body {
 #btn-change-theme {
   border: none;
   background: none;
-  color: #fff;
   font-size: 1.5rem;
 }
 
@@ -123,44 +128,22 @@ body {
   cursor: pointer;
 }
 
+#btn-change-theme:active #light {
+  color: #fff;
+}
+
+#btn-change-theme:active #dark {
+  color: #000;
+}
+
 #btn-change-theme #light {
   color: #fa0;
 }
 
 #btn-change-theme #dark {
-  color: #005;
+  color: #05f;
 }
 
 .invisible {
   display: none;
-}
-
-@media (max-width: 425px) {
-  .calculator {
-    height: 100%;
-    width: 100%;
-  }
-
-  .calculator .display,
-  .calculator .buttons {
-    width: 90%;
-  }
-
-  .calculator .buttons {
-    height: 70%;
-    grid-template-rows: repeat(5, 1fr);
-  }
-}
-
-@media (max-width: 320px) {
-
-  .calculator .display,
-  .calculator .buttons {
-    width: 100%;
-  }
-
-  .calculator .buttons {
-    height: 60%;
-    grid-template-rows: repeat(5, 1fr);
-  }
 }
