@@ -9,15 +9,15 @@
 /*define variables css*/
 :root {
     /*dark theme*/
-    --bg-dark: #111;
+    --bg-dark: #000;
     --text-dark: #ddd;
-    --bg-calculator-dark: #333;
-    --title-dark: #aaa;
-    --operator-dark: #999;
-    --bg-display-dark: #444;
-    --bg-buttons-dark: #222;
-    --bg-operations-dark: #111;
-    --equal-dark: #0a5; 
+    --bg-calculator-dark: #444;
+    --title-dark: #bbb;
+    --operator-dark: #aaa;
+    --bg-display-dark: #555;
+    --bg-buttons-dark: #333;
+    --bg-operations-dark: #252525;
+    --equal-dark: #0a6; 
     --btn-theme-dark: transparent;
     /*light theme*/
     --bg-light: #bbb;
@@ -25,9 +25,9 @@
     --bg-calculator-light: #888;
     --title-light: #222;
     --operator-light: #333;
-    --bg-display-light: #999;
-    --bg-buttons-light: #777;
-    --bg-operations-light: #616161;
+    --bg-display-light: #aaa;
+    --bg-buttons-light: #999;
+    --bg-operations-light: #777;
     --equal-light: #5f7;
     --btn-theme-light: #222;
 }
@@ -56,38 +56,34 @@ body {
     padding:10px;
     font-size: 1.5rem;
     cursor: pointer;
-}
-
-#themes-container .icon-theme#dark,
-#themes-container .icon-theme#light {
     border: 2px solid #aaa;
     transition: .5s;
     background: var(--btn-theme-dark);
 }
 
-#themes-container .icon-theme#dark:hover ,
-#themes-container .icon-theme#light:hover {
+#themes-container .icon-theme#light:hover,
+#themes-container .icon-theme#dark:hover {
     color: #000;
 }
 
-#themes-container .icon-theme#light {
+#themes-container #light {
     border-right-width: 1px;
     color: #fd0;
     overflow: hidden;
     border-radius: 20px 0 0 20px;
 }
 
-#themes-container .icon-theme#light:hover {
-    background: #fd0;  
+#themes-container #light:hover {
+    background: #fd0;
 }
 
-#themes-container .icon-theme#dark {
+#themes-container #dark {
     border-left-width: 1px;
     color: #0ff;
     border-radius: 0 20px 20px 0;
 }
 
-#themes-container .icon-theme#dark:hover {
+#themes-container #dark:hover {
     background: #0ff;
 }
 
@@ -186,7 +182,8 @@ body.light {
 }
 
 //container's button for changing theme
-#themes-container.light button.icon-theme {
+#themes-container.light #dark,
+#themes-container.light #light {
     background-color: var(--btn-theme-light);
 }
 
@@ -208,9 +205,17 @@ body.light {
    color: var(--operation-dark);
 }
 
-#themes-container.light .icon-theme#dark,
-#themes-container.light .icon-theme#light {
+#themes-container.light #dark,
+#themes-container.light #light {
     background: var(--btn-theme-light);
+}
+
+#themes-container.light #light:hover{
+    background: #fd0;
+}
+
+#themes-container.light #dark:hover{
+    background: #0ff;
 }
 
 /*buttons in light-theme*/
