@@ -2,27 +2,22 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+  <meta keyset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Calculator</title>
   <link rel="stylesheet" href="./css/style.css">
-
   <!--import font awesome to the project-->
   <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
     integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
     crossorigin="anonymous"></script>
-
   <script src="./js/theme.js" defer></script>
-
   <script src="./js/calculator.js" defer></script>
-
 </head>
 
 <body>
 
   <button id="btn-change-theme">
-
     <div class="icon-theme">
       <i class="fa fa-sun" id="light"></i>   
     </div>
@@ -30,44 +25,43 @@
     <div class="icon-theme invisible">
       <i class="fa fa-moon" id="dark"></i>
     </div>
-
   </button>
 
-  <div class="calculator">
+  <div id="calculator">
     <h1>Calculator</h1>
 
-    <div class="display">
-      <div class="accumulator">0</div>
-      <div class="expression">0</div>
-      <div class="operator">=</div>
+    <div id="display">
+      <div id="accumulator">0</div>
+      <div id="expression">0</div>
+      <div id="operator">=</div>
     </div>
 
-    <div class="buttons">
-      <button class="button operator">+</button>
-      <button class="button operator">-</button>
-      <button class="button operator">&times;</button>
-      <button class="button operator">&div;</button>
+    <div id="buttons-container">
 
-      <button class="button number">7</button>
-      <button class="button number">8</button>
-      <button class="button number">9</button>
-      <button class="button config">CE</button>
+      <button class="operate">CE</button>
+      <button class="operate">C</button>
+      <button class="operate">&larr;</button>
+      <button class="operation">+</button>
 
-      <button class="button number">4</button>
-      <button class="button number">5</button>
-      <button class="button number">6</button>
+      <button class="key">7</button>
+      <button class="key">8</button>
+      <button class="key">9</button>
+      <button class="operation">-</button>
 
-      <button class="button number">1</button>
-      <button class="button number">2</button>
-      <button class="button number">3</button>
+      <button class="key">4</button>
+      <button class="key">5</button>
+      <button class="key">6</button>
+      <button class="operation">*</button>
 
-      <button class="button number">.</button>
-      <button class="button number">0</button>
-      <button class="button config">&larr;</button>
-      <button class="button config" id="equal">=</button>
+      <button class="key">1</button>
+      <button class="key">2</button>
+      <button class="key">3</button>
+      <button class="operation">/</button>
 
+      <button class="key">.</button>
+      <button class="key">0</button>
+      <button class="operate" id="equal">=</button>
     </div>
-
   </div>
 
 </body>

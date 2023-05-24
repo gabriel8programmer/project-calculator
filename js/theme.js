@@ -2,8 +2,7 @@ const body = document.querySelector("body")
 const btnChangeTheme = document.getElementById("btn-change-theme")
 const iconThemes = [...document.querySelectorAll(".icon-theme")]
 
-//functions 
-
+//functions
 const changeIcon = ()=> {
 	iconThemes.map( iconTheme => {
 		iconTheme.classList.toggle("invisible")
