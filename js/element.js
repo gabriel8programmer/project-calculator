@@ -7,6 +7,7 @@ export default {
     calculator: document.querySelector("#calculator"),
     accumulator: document.querySelector("#display #accumulator"),
     number: document.querySelector("#display #number"),
+    operation: document.querySelector("#display #operator"),
     buttonsContainer: document.querySelector("#button-container"),
-    buttons: document.querySelectorAll("#button-container button"),
+    buttons: [...document.querySelectorAll("#buttons-container button")],
 }
