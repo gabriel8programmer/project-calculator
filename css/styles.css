@@ -11,12 +11,12 @@
     /*dark theme*/
     --bg-dark: #000;
     --text-dark: #ddd;
-    --bg-calculator-dark: #444;
+    --bg-calculator-dark: #353535;
     --title-dark: #bbb;
     --operator-dark: #aaa;
-    --bg-display-dark: #555;
-    --bg-buttons-dark: #333;
-    --bg-operations-dark: #252525;
+    --bg-display-dark: #151515;
+    --bg-buttons-dark: #000;
+    --bg-operations-dark: #111;
     --equal-dark: #0a6; 
     --btn-theme-dark: transparent;
     /*light theme*/
@@ -91,7 +91,7 @@ body {
 #calculator {
     width: 400px;
     border-radius: 5px;
-    padding:1.5rem 1rem;
+    padding:2rem 1.5rem;
     background: var(--bg-calculator-dark)
 }
 

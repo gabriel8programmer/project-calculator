@@ -8,6 +8,5 @@ export default {
     accumulator: document.querySelector("#display #accumulator"),
     number: document.querySelector("#display #number"),
     operation: document.querySelector("#display #operator"),
-    buttonsContainer: document.querySelector("#button-container"),
     buttons: [...document.querySelectorAll("#buttons-container button")],
 }

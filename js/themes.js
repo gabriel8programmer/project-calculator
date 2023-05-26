@@ -1,10 +1,22 @@
 
-const defineThemeDark = (element)=> {
-    element.classList.remove("light")
-}
+export default class Theme {
 
-const defineThemeLight = (element)=> {
-    element.classList.add("light")
-}
+    constructor(isLightTheme, manipulableElements){
+        this.isLightTheme = isLightTheme
+        this.manipulableElements = manipulableElements
+        const { body, themesContainer, calculator} = this.manipulableElements
+        this.listManipulableElements = [body, themesContainer, calculator]
+    }
 
-export default {defineThemeDark,defineThemeLight}
+    enableLightTheme = function(){
+        this.listManipulableElements.map(element=>{
+            element.classList.add("light")
+        })
+    }
+
+    disableLightTheme = function(){
+        this.listManipulableElements.map(element=>{
+            element.classList.remove("light")
+        })
+    }
+}
