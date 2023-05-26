@@ -2,63 +2,65 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Calculator</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <script src="./js/script.js" defer></script>
+  <meta keyset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Calculator</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <!--import font awesome to the project-->
+  <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+    integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+    crossorigin="anonymous"></script>  
+    <script src="./js/script.js" defer type="module"></script>  
 </head>
 
 <body>
 
-    <!--container calculator-->
-    <div class="calculator">
+  <div id="themes-container">
+    <button class="icon-theme" id="light">
+      <i class="fa fa-sun"></i>   
+    </button>
+    
+    <button class="icon-theme" id="dark">
+      <i class="fa fa-moon"></i>
+    </button>
+  </div>
 
-        <div class="container">
+  <div id="calculator">
+    <h1>Calculator</h1>
 
-            <!--title of the calculator-->
-            <h1 class="title">Calculator</h1>
-
-            <!--display of the calculator-->
-            <div class="display" id="display">
-                <div class="container-display">
-                    <span id="accumulator">0</span>
-                    <span id="expression">0</span>
-                </div>
-                <span id="operator">=</span>
-            </div>
-
-            <!--buttons of the calculator-->
-            <div class="buttons">
-
-                <button class="button operator">+</button>
-                <button class="button operator">-</button>
-                <button class="button operator">&times;</button>
-                <button class="button operator">&div;</button>
-
-                <button class="button char">7</button>
-                <button class="button char">8</button>
-                <button class="button char">9</button>
-
-                <button class="button char">4</button>
-                <button class="button char">5</button>
-                <button class="button char">6</button>
-
-                <button class="button char">1</button>
-                <button class="button char">2</button>
-                <button class="button char">3</button>
-                <button id="equal" class="button">=</button>
-
-                <button id="clear" class="button">CE</button>
-                <button class="button char">0</button>
-                <button class="button char">.</button>
-
-            </div>
-
-        </div>
+    <div id="display">
+      <div id="accumulator">0</div>
+      <div id="number">0</div>
+      <div id="operator">=</div>
     </div>
-    <!--end container calculator-->
+
+    <div id="buttons-container">
+      <button class="operate">CE</button>
+      <button class="operate">C</button>
+      <button class="operate">&larr;</button>
+      <button class="operation">+</button>
+
+      <button class="key">7</button>
+      <button class="key">8</button>
+      <button class="key">9</button>
+      <button class="operation">-</button>
+
+      <button class="key">4</button>
+      <button class="key">5</button>
+      <button class="key">6</button>
+      <button class="operation">*</button>
+
+      <button class="key">1</button>
+      <button class="key">2</button>
+      <button class="key">3</button>
+      <button class="operation">/</button>
+
+      <button class="key">.</button>
+      <button class="key">0</button>
+      <button class="operate" id="equal">=</button>
+    </div>
+  </div>
 
 </body>
 
