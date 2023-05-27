@@ -1,7 +1,7 @@
 
 import element from "./element.js"
 import Theme from "./themes.js"
-import Calculator from "./calculator.js"
+import Calculator from "./Calculator.js"
 
 function createNewCalculator(){
     const {accumulator, number, operation} = element
@@ -15,6 +15,14 @@ function createManipulatorTheme(){
     })
 }
 
+function activeOrDesactiveButton(){
+    const {ButtonchangeDark, ButtonchangeLight} = element
+    const buttons = [ButtonchangeDark, ButtonchangeLight]
+    buttons.map(button=> {
+        button.classList.toggle("active")
+    })
+}
+
 //object calculator created
 const calculator = createNewCalculator()
 
@@ -23,13 +31,13 @@ const manipulatorTheme = createManipulatorTheme()
 
 //add events
 element.ButtonchangeDark.addEventListener("click", (e)=>{
-    manipulatorTheme.isLightTheme = false
     manipulatorTheme.disableLightTheme()
+    activeOrDesactiveButton()
 })
 
 element.ButtonchangeLight.addEventListener("click", (e)=>{
-    manipulatorTheme.isLightTheme = true
     manipulatorTheme.enableLightTheme()
+    activeOrDesactiveButton()
 })
 
 //buttons of the calculator

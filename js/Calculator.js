@@ -46,40 +46,54 @@ export default class Calculator {
     }
 
     isInvalidExpression = function(){
-        return (this.getLengthNumber() == 0 || this.currentExpressionChar == "0")
+        return (!Number(this.currentExpressionChar))
     }
 
     //add numbers in display of the calculator
-    updateNumber = function(value){
-        const canNotTwoDotsInExpression = (this.currentExpressionChar.includes(".") && value==".")
-        const hasTwoZerosInBeginningExpression = (this.currentExpressionChar.indexOf(0)=="0" && value=="0")
-
-        if (canNotTwoDotsInExpression || hasTwoZerosInBeginningExpression){
+    updateNumber = function(value){ 
+        const hasTwoDotsInExpression = (this.currentExpressionChar.includes(".") && value==".")
+        
+        if (hasTwoDotsInExpression){
             return
         }
 
-        const isPermitedEraseZeroOrNo = this.currentExpressionChar.indexOf(0)=="0" && value!="." && this.getLengthNumber() <= 1
-
-        if (isPermitedEraseZeroOrNo){
-            this.currentExpressionChar = ""
+        if (this.isResettedExpression){
+            this.currentExpressionChar="0"
+            this.isResettedExpression=false
         }
-        
+
+        if (this.currentExpressionChar == "0" && value!="."){
+            this.currentExpressionChar=""
+        }
+
+        if (this.currentExpressionChar == "-" && value=="."){
+            this.currentExpressionChar+="0"
+        }
+    
         this.currentExpressionChar += value
         this.updateDisplay()
     }
 
     //update operation in calculator
     updateOperation = function(operator){
-        const isOperatorEqualsMinus = (operator=="-")
-        const isAccumulatorDiferentZero = (+this.currentAccumulatorValue)
-        
-        if (this.isInvalidExpression() && !isAccumulatorDiferentZero){
+        if (operator != "-" && this.isInvalidExpression()){
             return
         }
 
-        this.currentAccumulatorValue = (!isAccumulatorDiferentZero) ? +this.currentExpressionChar: this.currentAccumulatorValue
-        this.currentMathOperationChar = operator
-        this.currentExpressionChar="0"
+        if (operator == "-" && this.currentExpressionChar=="0"){
+            this.currentExpressionChar=operator
+            this.isResettedExpression=false
+        }
+
+        if (this.currentExpressionChar!="-") {
+            this.currentMathOperationChar = operator
+        }
+
+        if (!this.isInvalidExpression()){
+            this.currentAccumulatorValue = +this.currentExpressionChar
+            this.currentExpressionChar="0"
+        }
+        
         this.updateDisplay()
     }
 
@@ -112,6 +126,7 @@ export default class Calculator {
         this.currentExpressionChar = this.currentMathOperation(+this.currentAccumulatorValue, +this.currentExpressionChar).toString()
         this.currentAccumulatorValue=0
         this.currentMathOperationChar="="
+        this.isResettedExpression = true
     }
 
     executeAlternativeActions = function(operation){
