@@ -69,7 +69,6 @@ body {
     border-radius: 20px 0 0 20px;
 }
 
-#themes-container #light:hover,
 #themes-container .icon-theme.active#light  {
     background: #fd0;
     color: #000;
@@ -81,7 +80,6 @@ body {
     border-radius: 0 20px 20px 0;
 }
 
-#themes-container #dark:hover,
 #themes-container .icon-theme.active#dark {
     background: #0ff;
     color: #000;
@@ -209,14 +207,6 @@ body.light {
 #themes-container.light #dark,
 #themes-container.light #light {
     background: var(--btn-theme-light);
-}
-
-#themes-container.light #light:hover{
-    background: #fd0;
-}
-
-#themes-container.light #dark:hover{
-    background: #0ff;
 }
 
 /*buttons in light-theme*/
